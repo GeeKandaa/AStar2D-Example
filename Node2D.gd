@@ -153,7 +153,7 @@ func _disconnectPoints(): #disconnects points - needed when swapping diagonals o
 
 func _getPath(from, to): #Godot's built-in aStar script to find path
 	path = aStar.get_point_path(_generateID(from), _generateID(to))
-	path.remove(0) #we remove first step of path, since it's our starting point
+	path.remove_at(0) #we remove first step of path, since it's our starting point
 
 func _generateID(pos): #generates unique id for each position - just trust the math
 	var x = pos.x
